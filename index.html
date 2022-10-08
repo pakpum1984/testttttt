@@ -2,7 +2,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <title>Contact Us</title>
+    <title>จองรถเบอร์.9</title>
     <link rel="shortcut icon" href="images/index.ico" type="image/x-icon">
  
     <!-- Font Awesome -->
@@ -20,12 +20,6 @@
   />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
-	 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-	
-  </script>
 <head>
 <style>
         body {
@@ -95,10 +89,7 @@
       url: url ,
       method: "GET",
       dataType: "jsonp"
-	  
     });
-	
-	
   }
 //อัปเดทข้อมูล
   function update_value(){
@@ -217,16 +208,16 @@ function read_value() {
                 <div class="py-lg-4 py-md-4 py-sm-3 py-2"></div>
                 <div class="row justify-content-center pt-1"> 
                     <div class="col-lg-6 col-md-10">
-                        <h3 class="text-center">แบบฟอร์มจองรถ</h3>
+                        <h3 class="text-center" style="color: blue;">แบบฟอร์มจองรถเบอร์.9</h3>
  <br>
 
 <!-- สร้างฟอร์ม -->
 <form class="form_overlay" method="POST"> 
-    <div class="row g-2">
+    <div class="row g-4">
         <div class="col-lg-6">
             <div class="input_overlay">
                 <label for="firstname" class="lable">ชื่อผู้จอง</label>
-                <input type="text" id="firstname" name="firstname" class="form-control" required="">
+                <input type="text" id="firstname" name="firstname" class="form-control" style="font-size: 19px;" required oninvalid="this.setCustomValidity('กรุณาป้อนชื่อของท่านด้วยครับ')">
             </div>
         </div>
        <div class="col-lg-6">
@@ -272,7 +263,7 @@ function read_value() {
         <div class="col-lg-6">
             <div class="input_overlay">
                 <label for="loca" class="lable">สถานที่ๆไปติดต่อ</label>
-                <input type="text" id="loca" name="loca" class="form-control" required="">
+                <input type="text" id="loca" name="loca" class="form-control" style="font-size: 19px;" required="">
             </div>
         </div>
 
@@ -280,7 +271,7 @@ function read_value() {
             <div class="input_overlay">
                 <label for="date" class="lable">วันและเวลาที่ต้องการจอง</label>
                 <!-- <input type="text" id="date" name="date" class="form-control" required autocomplete="off"> -->
-				 <select class="form-select" id="date" name="date" aria-label="Default select example">
+				 <select class="form-select" id="date" name="date" aria-label="Default select example" required="">
     <option selected></option>
     <option value="30/9/65 เช้า">30/9/65 เช้า</option>
     <option value="30/9/65 บ่าย">30/9/65 บ่าย</option>
@@ -353,21 +344,21 @@ function read_value() {
         <div class="col-lg-6">
             <div class="input_overlay">
                 <label for="other" class="lable">อื่นๆ</label>
-                <input type="text" id="other" name="other" class="form-control" required autocomplete="on">
+                <input type="text" id="other" name="other" class="form-control" style="font-size: 19px;">
             </div>
         </div>
 		
-		 <input type="text" class="input" id="preapporved" name="preapporved" value ="รออนุมัติ" style="display: none;" required>
-		
+		 <input type="text" class="input" id="preapporved" name="preapporved" value ="รออนุมัติ" style="display: none;">
+		  
 		 <!-- เรียกตัว loder มาแสดง-->
 <center><div id="loader"></div></center>
 <center><p id="re">กรุณารอผลการจอง</p></center>
- 
+
                    <div class="col-12 text-center">
                         <input type = "submit" class="btn btn-primary mt-3" 
                          id = "b1" onClick="insert_value()" value = "เพิ่มข้อมูล" ></input>
                    </div>
-     </form>
+    </form>
    
 
 
@@ -380,17 +371,20 @@ onclick="update_value()" value="อัปเดทข้อมูล" />
 <input type="button" style="font-size:12pt;color:white;background-color:#975AE0;border:1px solid #000000;padding:2px" 
 onclick="delete_value()" value="ลบข้อมูล" />-->
 
-<br><br>
-<center><a href="https://docs.google.com/spreadsheets/d/13NHCnnmSunJqaljVGodjrRMT5gnr02rATE35hl9mu-o/edit?usp=sharing" target="_blank">ดูข้อมูลในชีต</a></center>
+<!-- <br><br>
+<center><a href="https://docs.google.com/spreadsheets/d/13NHCnnmSunJqaljVGodjrRMT5gnr02rATE35hl9mu-o/edit?usp=sharing" target="_blank">ดูข้อมูลในชีต</a></center> -->
 <div id="showData"></div>
 </div>
 
  </div>
  </div>
  </div>
+<script>
 
-
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <html>
